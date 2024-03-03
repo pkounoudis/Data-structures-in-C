@@ -1,6 +1,6 @@
 #include "linked_list.h"
 
-/*LL_init(): arxikopoiei thn linked list*/
+/*LL_init(): initialising the liked list*/
 void LL_init(LIST_PTR *head)
 {
 	*head=NULL;
