@@ -11,10 +11,10 @@ main()
 	
 	TR_init(&root);
 	
-	//Eisagwgh tou 10
+	//Number ten as input
 	TR_insert_root(&root, 10);
 	
-	//Eisagwgh epipleon stoixeiwn
+	//More input
 	TR_insert_left(root, 6);
 	TR_insert_right(root, 14);
 	
@@ -28,7 +28,7 @@ main()
 	TR_insert_right(root->left->left->left, 3);
 
 	
-	/*Ektypwsh toy dentroy*/
+	/*Printing the tree*/
 	printf("\n PREORDER: ");
 	TR_preorder(root);	
 	
