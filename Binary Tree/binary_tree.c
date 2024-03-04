@@ -5,25 +5,25 @@
 
 
 
-/*Tr_init: arxikopoiei to dentro*/
+/*Tr_init: Initialising the tree*/
 void TR_init(TREE_PTR *root)
 {
 	*root=NULL;
 }
 
-/*Tr_empty: elegxei ean to dentro einai iso me NULL*/
+/*Tr_empty: Checks if tree == NULL*/
 int TR_empty(TREE_PTR root)
 {
 	return root == NULL;
 }
 
-/*Tr_data: epistrefei ta dedomena toy komvoy poy deixnei o deikths*/
+/*Tr_data: returns node data where the pointer points*/
 elem TR_data(TREE_PTR p)
 {
 	return p->data;
 }
 
-/*Tr_insert_root: eisagei to stoixeio x sth riza tou dentroy*/
+/*Tr_insert_root: inserts element x in tree's root*/
 int TR_insert_root(TREE_PTR *root, elem x)
 {
 	TREE_PTR newnode;
@@ -34,7 +34,7 @@ int TR_insert_root(TREE_PTR *root, elem x)
 	newnode=(TREE_NODE *)malloc(sizeof(TREE_NODE));
 	if(!newnode)
 	{
-		printf("Adynamia desmeyshs mnhmhs!");
+		printf("Canot allocate memory!");
 		return FALSE;
 	}
 	
@@ -46,7 +46,7 @@ int TR_insert_root(TREE_PTR *root, elem x)
 	return TRUE;
 }
 
-/*Tr_insert_left: eisagei to stoixeio x ws aristero paidi toy node*/
+/*Tr_insert_left: inserts element as the node's left child*/
 int TR_insert_left(TREE_PTR node, elem x)
 {
 	TREE_PTR newnode;
@@ -57,7 +57,7 @@ int TR_insert_left(TREE_PTR node, elem x)
 	newnode=(TREE_NODE *)malloc(sizeof(TREE_NODE));
 	if (!newnode)
 	{
-		printf("Adynamia desmeyshs mnhmhs!");
+		printf("Canot allocate memory!");
 		return FALSE;
 	}
 	
@@ -69,7 +69,7 @@ int TR_insert_left(TREE_PTR node, elem x)
 	return TRUE;	
 }
 
-/*Tr_insert_right: eisagei to stoixeio x ws deksi paidi toy node*/
+/*Tr_insert_right: inserts element as the node's right child*/
 int TR_insert_right(TREE_PTR node, elem x)
 {
 	TREE_PTR newnode;
@@ -80,7 +80,7 @@ int TR_insert_right(TREE_PTR node, elem x)
 	newnode=(TREE_NODE *)malloc(sizeof(TREE_NODE));
 	if (!newnode)
 	{
-		printf("Adynamia desmeyshs mnhmhs!");
+		printf("Cannot allocate memory!");
 		return FALSE;
 	}
 	
@@ -92,7 +92,7 @@ int TR_insert_right(TREE_PTR node, elem x)
 	return TRUE;	
 }
 
-/*Tr_delete_root(): diagrafei th riza enos dentroy efoson DEN exei paidia*/
+/*Tr_delete_root(): deletes tree's root if there are NO CHILDREN*/
 int TR_delete_root(TREE_PTR *root, elem *x)
 {
 	if((*root)->left!=NULL || (*root)->right!=NULL)
@@ -104,7 +104,7 @@ int TR_delete_root(TREE_PTR *root, elem *x)
 	return TRUE;		
 }
 
-/*Tr_delete_left(): diagrafei to aristero paidi efoson DEN exei paidia*/
+/*Tr_delete_left(): deletes left child if it has no other children*/
 int TR_delete_left(TREE_PTR parent, elem *x)
 {
 	TREE_PTR current;
@@ -122,7 +122,7 @@ int TR_delete_left(TREE_PTR parent, elem *x)
 	return TRUE;	
 }
 
-/*Tr_delete_right(): diagrafei to aristero paidi efoson DEN exei paidia*/
+/*Tr_delete_right(): deletes right child if it has no other children*/
 int TR_delete_right(TREE_PTR parent, elem *x)
 {
 	TREE_PTR current;
@@ -140,7 +140,7 @@ int TR_delete_right(TREE_PTR parent, elem *x)
 	return TRUE;	
 }
 
-/*TR_preorder(): Ektypwnei kata thn prodiatetagmenh diadromh*/
+/*TR_preorder(): prints preorder route*/
 void TR_preorder(TREE_PTR v)
 {
 	if(v!=NULL)
@@ -154,7 +154,7 @@ void TR_preorder(TREE_PTR v)
 }
 
 
-/*TR_inorder(): Ektypwnei kata thn endodiatetagmenh diadromh*/
+/*TR_inorder(): prints inorder route*/
 void TR_inorder(TREE_PTR v)
 {
 	if(v!=NULL)
@@ -167,7 +167,7 @@ void TR_inorder(TREE_PTR v)
 	
 }
 
-/*TR_postorder(): Ektypwnei kata thn metadiatetagmenh diadromh*/
+/*TR_postorder(): prints postorder route*/
 void TR_postorder(TREE_PTR v)
 {
 	if(v!=NULL)
@@ -187,7 +187,7 @@ void TR_print_node(TREE_PTR v)
 	printf("%d ",v->data);
 }
 
-/*TR_search_BST(): anazhthsh toy x sto dyadiko dentro me riza root*/
+/*TR_search_BST(): searching x in binary tree with root*/
 int TR_search_BST(TREE_PTR root, elem x)
 {
 	TREE_PTR current;
@@ -207,19 +207,19 @@ int TR_search_BST(TREE_PTR root, elem x)
 	return FALSE;
 }
 
-/*TR_insert_BST(): eisagwgh toy x sto dyadiko dentro me riza root*/
+/*TR_insert_BST(): insterting x in binary tree with root*/
 int TR_insert_BST(TREE_PTR *root, elem x)
 {
 	TREE_PTR current;
 	
-	//1. Eisagwgh se adeio dentro
+	//1. Insert in empty tree
 	if (*root==NULL)
 	{
 		TR_insert_root(root, x);
 		return TRUE;
 	}
 	
-	//2. Anazhthsh kai eisagwgh sto dentro
+	//2. Searching and inserting in the tree
 	current=*root;
 	while(1)
 	{
