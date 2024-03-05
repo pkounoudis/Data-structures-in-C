@@ -6,7 +6,7 @@ void LL_init(LIST_PTR *head)
 	*head=NULL;
 }
 
-/*LL_empty(): epistrefei TRUE/FALSE an h lista einai adeia h gemath*/
+/*LL_empty(): returns TRUE/FALSE if list is empty or full*/
 int LL_empty(LIST_PTR head)
 {
 	return head==NULL;
