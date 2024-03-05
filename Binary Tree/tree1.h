@@ -1,4 +1,4 @@
-/*tree.h: Dhlwseis dyadikoy dentrou*/
+/*tree.h: binary tree declarations*/
 
 #define TRUE 1
 #define FALSE 0
