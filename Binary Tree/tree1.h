@@ -3,16 +3,16 @@
 #define TRUE 1
 #define FALSE 0
 
-typedef int elem;   /*  typos dedomenwn dentroy  */
+typedef int elem;   /*  tree data type  */
 
-struct node{			/*  typos komvou dentroy  */
-	elem data;			/*  dedomena  */
-	struct node *left;  /*  aristero paidi  */
-	struct node *right; /*  deksi paidi  */
+struct node{			/*  tree node type  */
+	elem data;			/*  data  */
+	struct node *left;  /*  left child  */
+	struct node *right; /*  right child  */
 };
 
-typedef struct node TREE_NODE; /*Synwnymo toy komvoy dentrou*/
-typedef struct node *TREE_PTR;	/*Synwnymo toy deikth komvoy dentroy*/
+typedef struct node TREE_NODE; /*synonym of tree node*/
+typedef struct node *TREE_PTR;	/*synonym of ponter tree node*/
 
 void TR_init(TREE_PTR *root);
 int TR_empty(TREE_PTR root);
