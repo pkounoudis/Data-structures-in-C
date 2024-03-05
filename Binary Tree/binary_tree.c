@@ -34,7 +34,7 @@ int TR_insert_root(TREE_PTR *root, elem x)
 	newnode=(TREE_NODE *)malloc(sizeof(TREE_NODE));
 	if(!newnode)
 	{
-		printf("Canot allocate memory!");
+		printf("Cannot allocate memory!");
 		return FALSE;
 	}
 	
