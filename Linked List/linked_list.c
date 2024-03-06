@@ -12,7 +12,7 @@ int LL_empty(LIST_PTR head)
 	return head==NULL;
 }
 
-/*LL_insert_start(): Eisagei to stoixeio x meta ton head, sthn arxh ths listas dld*/
+/*LL_insert_start(): Inserts element x after head, at the beginning of the list*/
 int LL_insert_start(LIST_PTR *head, elem x)
 {
 	LIST_PTR newnode;
