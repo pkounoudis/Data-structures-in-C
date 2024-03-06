@@ -94,7 +94,7 @@ void LL_destroy(LIST_PTR *head)
 	
 }
 
-/*void LL_print(): Typwnei ta periexomena ths listas*/
+/*void LL_print(): Prints list's content*/
 void LL_print(LIST_PTR head)
 {
 	LIST_PTR current;
