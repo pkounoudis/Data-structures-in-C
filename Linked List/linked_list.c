@@ -20,7 +20,7 @@ int LL_insert_start(LIST_PTR *head, elem x)
 	newnode=(LIST_NODE *)malloc(sizeof(LIST_NODE));
 	if(!newnode)
 	{
-		printf("Adynamia desmeyshs mnhmhs");
+		printf("Cannot allocate memory!");
 		return FALSE;
 	}
 	newnode->data=x;
@@ -38,7 +38,7 @@ int LL_insert_after(LIST_PTR p, elem x)
 	newnode=malloc(sizeof(LIST_NODE));
 	if(!newnode)
 	{
-		printf("Adynamia desmeyshs mnhmhs");
+		printf("Cannot allocate memory!");
 		return FALSE;
 	}
 	newnode->data=x;
