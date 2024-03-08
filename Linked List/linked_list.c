@@ -30,7 +30,7 @@ int LL_insert_start(LIST_PTR *head, elem x)
 	return TRUE;
 }
 
-/*LL_insert_after(): Eisagei to stoixeio x meta to stoixeio poy deixnei o p*/
+/*LL_insert_after(): Inserts the element x after the element that pointer points at*/
 int LL_insert_after(LIST_PTR p, elem x)
 {
 	LIST_PTR newnode;
@@ -48,7 +48,7 @@ int LL_insert_after(LIST_PTR p, elem x)
 	return TRUE;
 }
 
-/*LL_delete_start(): Diagrafei to prwto stoixeio ths listas*/
+/*LL_delete_start(): Deletes the first element of the list Diagrafei*/
 int LL_delete_start(LIST_PTR *head, elem *x)
 {
 	LIST_PTR current;
