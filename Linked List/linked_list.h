@@ -5,7 +5,7 @@
 
 typedef int elem;   /*  typos dedomenwn listas  */
 
-struct node{			/*  typos komvou listas  */
+struct node{			/*  type of list node  */
 	elem data;			/*  dedomena  */
 	struct node *next;  /*  epomenos  */
 };
