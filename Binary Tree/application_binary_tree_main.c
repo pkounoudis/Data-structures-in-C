@@ -29,13 +29,13 @@ main()
 
 	
 	/*Printing the tree*/
-	printf("\n PREORDER: ");
+	printf("\n preorder: ");
 	TR_preorder(root);	
 	
-	printf("\n INORDER: ");
+	printf("\n inorder: ");
 	TR_inorder(root);	
 	
-	printf("\n POSTORDER: ");
+	printf("\n postorder: ");
 	TR_postorder(root);		
 	
 	
